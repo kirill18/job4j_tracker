@@ -13,13 +13,7 @@ public class Battery {
     }
 
     public void exchange(Battery another) {
-        int temp = another.load;
         another.load += this.load;
-        if (another.load == 100) {
-            this.load = 0;
-        } else {
-            this.load -= temp;
-
-        }
+        this.load = 0;
     }
 }
