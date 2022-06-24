@@ -22,7 +22,7 @@ public class Library {
             System.out.println("После замены индексов " + "Название - " + book.getName() + "\tКоличество листов - " + book.getCount());
         }
         for (Book book:books) {
-            if (book.getName().equals("Clean code")) {
+            if ("Clean code".equals(book.getName())) {
                 System.out.println("Только с именем \"Clean code\" " + "Название - " + book.getName() + "\tКоличество листов - " + book.getCount());
                 break;
             }
