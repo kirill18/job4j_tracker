@@ -53,4 +53,13 @@ public class Tracker {
         Item item = findById(id);
         return item.getName().equals(replaceItem.getName());
     }
+
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        items[index] = null;
+        System.arraycopy(items, index + 1, items, index, size - index - 1);
+        items[size - 1] = null;
+        size--;
+        return  findById(id) == null;
+    }
 }
